@@ -1,6 +1,5 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
-
 /*
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
@@ -1290,11 +1289,15 @@
 				#header .content .inner > :last-child {
 					margin-bottom: 0;
 				}
+				
+				#header .content h1 {
+					font-size: 3.0rem;
+				}
 
 			#header .content p {
 				text-transform: uppercase;
 				letter-spacing: 0.2rem;
-				font-size: 0.8rem;
+				font-size: 2.1rem;
 				line-height: 2;
 			}
 
@@ -1305,7 +1308,8 @@
 			display: flex;
 			margin-bottom: 0;
 			list-style: none;
-			padding-left: 0.3rem;
+			padding-left: 0rem;
+			padding-right: 0.2rem;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
 		}
@@ -1471,6 +1475,7 @@
     text-align: center;
     padding: 6px;
     background-color: #232323;
+    background: rgba(76, 175, 80, 0);
     /*opacity: 0.5; currently this is problematic because it also changes the opacity of the text*/ 
 		}
 		
@@ -1711,7 +1716,6 @@ h1 { font-size: 1.5em; margin: 10px; }
   border: none;
   float: center;
   padding-right: 1000px;
-
 } */
 
 .rating > input { display: none; } 
@@ -1827,4 +1831,35 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 testtext{
 	color:black;
+}
+
+
+
+/*This is for the design of the about page*/
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('time-273857_1920.jpg');
+    min-height: 500px;
+    min-width: 9000px;
+}
+
+
+.bgimg-2 {
+	background-image: url('hot-air-balloons-439331_1280.jpg');
+    min-height: 500px;
+    min-width: 9000px;
+}
+
+.bgimg-3 {
+	background-image: url('hand-226358_1280.jpg');
+    min-height: 560px;
+    min-width: 8960px;
 }
