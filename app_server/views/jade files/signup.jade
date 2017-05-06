@@ -1,0 +1,48 @@
+doctype html
+html
+
+extends layout
+
+block content
+
+
+        h1 Sign Up Here Coming Soon
+        //email
+        //username
+        //password
+        //re-enter password
+        //pray to unixcorn god - correction, pray to Neo, Hacker Jesus
+       
+        form(ng-app='myApp', ng-controller='MyController', name='myForm', novalidate='')
+          p
+            | Create Username:
+            br
+            input(type='text', name='user', ng-model='user', required='')
+            span(style='color:red', ng-show='myForm.user.$dirty && myForm.user.$invalid')
+              span(ng-show='myForm.user.$error.required') Username is required.
+          p
+            | Enter Your Email:
+            br
+            input(type='email', name='email', ng-model='email', required='')
+            span(style='color:red', ng-show='myForm.email.$dirty && myForm.email.$invalid')
+              span(ng-show='myForm.email.$error.required') Email is required.
+              span(ng-show='myForm.email.$error.email') Invalid email address.
+           p
+            | Enter a Password:
+            br
+            input(type='text', name='password1', ng-model='password1', required='')
+            span(style='color:red', ng-show='myForm.password1.$dirty && myForm.password1.$invalid')
+              span(ng-show='myForm.password1.$error.required') Password is required.
+
+           p
+            | Re-entered Password:
+            br
+            input(type='text', name='password2', ng-model='password2', required='password1')
+            span(style='color:red', ng-show='myForm.password2.$dirty && myForm.password2.$invalid')
+              span(ng-show='myForm.password2.$error.required') Password is required.
+           p
+            input(type='submit', ng-disabled='myForm.user.$dirty && myForm.user.$invalid ||  \
+            myForm.email.$dirty && myForm.email.$invalid || \ myForm.password1.$dirty && myForm.password1.$invalid ||  \
+            myForm.password2.$dirty && myForm.password2.$invalid')
+
+        

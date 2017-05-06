@@ -1,0 +1,47 @@
+<html ng-app = 'myYelpApp'>
+    <script src = "yelpRequest.js"></script>
+    <body ng-controller = 'MyYelpController'>
+         
+        <script type="text/javascript">
+           function getYelp() {
+                document.write("Starting.");
+                document.write("halfway");
+
+                //var Yelp = require('../../node_modules/yelp');
+                //var Yelp = require('../yelp_stuff/yelpRequest');
+                var Yelp = require('../yelp_stuff/yelpRequest');
+                document.write("halfway");
+                getYelp();
+                  var client = new Yelp({
+                  consumer_key: 'PtgpJmRFHJZoeY5AHmUCOg', 
+                  consumer_secret:  'T5bXNOO7IcAynAbHfks16bws1qM',
+                  token: 'zmgd80w7xG8bmT9L0n-2G-v7jvH5g2Ia',
+                  token_secret: 'Wnn2JYxF5d2ra_WmnIbxYJkDYz4'
+                });
+                 document.write("no halfway");
+                getYelp();
+                // See http://www.yelp.com/developers/documentation/v2/search_api
+            client.search({ term: 'food', location: 'Montreal' })
+            .then(function (data) {
+                console.log(data);
+            
+            })
+            .catch(function (err) {
+              document.write(err);
+            });
+
+           }//get yelp
+               
+                getYelp();
+        </script>
+        
+        <p ng-model = "getYelp()">
+            <div id = "reyelp">Hi</div>
+            
+        </p>
+    </body>
+    
+    <script type="text/javascript" src="../../yelp_stuff/yelpRequest.js"></script>
+    
+</html>
+

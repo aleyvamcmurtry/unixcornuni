@@ -1,0 +1,27 @@
+doctype html
+html
+
+extends layout
+
+block content
+
+     h1 Login Here Coming Soon
+     //create user name
+     //password
+
+     form(ng-app='myApp', ng-controller='MyController', name='myForm', novalidate='')
+          p
+            | Username:
+            br
+            input(type='text', name='user', ng-model='user', required='')
+            span(style='color:red', ng-show='myForm.user.$dirty && myForm.user.$invalid')
+              span(ng-show='myForm.user.$error.required') Username is required.
+           p
+            | Password:
+            br
+            input(type='text', name='password', ng-model='password', required='')
+            span(style='color:red', ng-show='myForm.password.$dirty && myForm.password1.$invalid')
+              span(ng-show='myForm.password.$error.required') Password is required.
+           p
+            input(type='submit', ng-disabled='myForm.user.$dirty && myForm.user.$invalid ||  \
+            myForm.password1.$dirty && myForm.password1.$invalid')
